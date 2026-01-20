@@ -660,7 +660,7 @@ Good luck with your project! 🚀
 
 ---
 
-**Project Created By:** [Dr. Sarwan Singh]  
+**Project Created By:** Dr. Sarwan Singh 
 **Date:** 20/01/2026  
 **Institution:**  National Institute of Electronics & Information Technology, Ropar 
 **Course:** AIML/ IoT/ Blockchain Technology / Web Development
@@ -679,5 +679,6 @@ Good luck with your project! 🚀
 | PythonAnywhere | https://www.pythonanywhere.com |
 
 ---
+
 
 **Last Updated:** January 2026
