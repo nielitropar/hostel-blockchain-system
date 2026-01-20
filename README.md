@@ -52,7 +52,7 @@ A complete blockchain-based hostel room allocation system built with Ethereum Sm
 ## 📁 Project Structure
 
 ```
-hostel-allocation/
+hostel-blockchain-system/
 │
 ├── app.py                      # Flask application
 ├── requirements.txt            # Python dependencies
@@ -192,8 +192,8 @@ You need test ETH for both accounts:
 
 1. Create a new folder on your computer:
    ```
-   mkdir hostel-allocation
-   cd hostel-allocation
+   mkdir hostel-blockchain-system
+   cd hostel-blockchain-system
    ```
 
 2. Create the following files and paste the respective code:
@@ -263,7 +263,7 @@ Open browser and go to: `http://127.0.0.1:5000`
 3. **Navigate to:** `/home/yourusername/`
 4. **Create project folder:**
    - Click "New directory"
-   - Name it: `hostel-allocation`
+   - Name it: `hostel-blockchain-system`
    - Click into the folder
 
 5. **Upload files one by one:**
@@ -292,7 +292,7 @@ Open browser and go to: `http://127.0.0.1:5000`
 3. Run:
    ```bash
    git clone YOUR_GITHUB_REPO_URL
-   cd hostel-allocation
+   cd hostel-blockchain-system
    ```
 
 ### Step 3.3: Install Dependencies
@@ -301,7 +301,7 @@ Open browser and go to: `http://127.0.0.1:5000`
 2. **Click "Bash"** to open a new console
 3. **Navigate to your project:**
    ```bash
-   cd hostel-allocation
+   cd hostel-blockchain-system
    ```
 
 4. **Install requirements:**
@@ -333,7 +333,7 @@ Open browser and go to: `http://127.0.0.1:5000`
    import os
 
    # Add your project directory to the sys.path
-   project_home = '/home/yourusername/hostel-allocation'
+   project_home = '/home/yourusername/hostel-blockchain-system'
    if project_home not in sys.path:
        sys.path.insert(0, project_home)
 
@@ -350,14 +350,14 @@ Open browser and go to: `http://127.0.0.1:5000`
 1. **In Web tab, find "Static files" section**
 2. **Click "Enter URL" for first entry:**
    - URL: `/static/`
-   - Directory: `/home/yourusername/hostel-allocation/static/`
+   - Directory: `/home/yourusername/hostel-blockchain-system/static/`
 
 3. **Click the checkmark to save**
 
 ### Step 3.7: Update Contract Address
 
 1. **Go to Files tab**
-2. **Navigate to:** `/home/yourusername/hostel-allocation/`
+2. **Navigate to:** `/home/yourusername/hostel-blockchain-system/`
 3. **Click on `app.py`** to edit
 4. **Find line:**
    ```python
@@ -663,4 +663,5 @@ You've successfully built and deployed a blockchain-based hostel allocation syst
 
 
 **Last Updated:** 20 January 2026
+
 
