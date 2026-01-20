@@ -37,7 +37,7 @@
 7. Save student address too
 
 ### Step 4: Get Free Test ETH
-1. Go to **https://sepoliafaucet.com**
+1. Go to **https://cloud.google.com/application/web3/faucet/ethereum/sepolia or https://sepoliafaucet.com**
 2. Login with Google (free)
 3. Paste your **College address**
 4. Click **"Send Me ETH"**
