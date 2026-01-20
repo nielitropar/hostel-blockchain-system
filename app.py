@@ -4,15 +4,17 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
+
 
 @app.route('/api/config', methods=['GET'])
 def get_config():
     """Return contract configuration"""
     config = {
-        'contractAddress': 'YOUR_CONTRACT_ADDRESS_HERE',
+        'contractAddress': '0xE5291BB24094552DFe4B169A024AB52AE11b3F6d',
         'sepoliaChainId': '0xaa36a7',  # 11155111 in hex
         'contractABI': [
             {
@@ -72,6 +74,7 @@ def get_config():
         ]
     }
     return jsonify(config)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
