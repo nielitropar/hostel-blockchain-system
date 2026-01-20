@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Room Allocation - Blockchain DApp</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🏢 Hostel Room Allocation System</h1>
+                <p class="subtitle">Blockchain-Based Room Booking on Sepolia Testnet</p>
+            </div>
+            <div class="wallet-section">
+                <button id="connectWallet" class="btn btn-primary">
+                    <span class="icon">🦊</span> Connect MetaMask
+                </button>
+                <div id="walletInfo" class="wallet-info" style="display: none;">
+                    <div class="wallet-address">
+                        <strong>Connected:</strong> <span id="userAddress"></span>
+                    </div>
+                    <div class="wallet-role">
+                        <span id="userRole" class="role-badge"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Alert Messages -->
+        <div id="alertContainer"></div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Admin Panel -->
+            <div id="adminPanel" class="panel" style="display: none;">
+                <div class="panel-header">
+                    <h2>🔑 Admin Panel</h2>
+                    <p>Add new hostel rooms to the system</p>
+                </div>
+                <div class="panel-body">
+                    <form id="addRoomForm" class="form">
+                        <div class="form-group">
+                            <label for="roomFee">Room Fee (ETH)</label>
+                            <input type="number" id="roomFee" step="0.001" placeholder="0.01" required>
+                            <small>Enter fee in ETH (e.g., 0.01, 0.05, 0.1)</small>
+                        </div>
+                        <button type="submit" class="btn btn-success">
+                            <span class="icon">➕</span> Add Room
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Available Rooms -->
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>🏠 Available Rooms</h2>
+                    <button id="refreshRooms" class="btn btn-secondary btn-sm">
+                        <span class="icon">🔄</span> Refresh
+                    </button>
+                </div>
+                <div class="panel-body">
+                    <div id="loadingRooms" class="loading">
+                        <div class="spinner"></div>
+                        <p>Loading rooms...</p>
+                    </div>
+                    <div id="roomsGrid" class="rooms-grid"></div>
+                    <div id="noRooms" class="empty-state" style="display: none;">
+                        <p>📭 No rooms available yet</p>
+                        <small>Admin needs to add rooms first</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- My Allocation -->
+            <div id="studentPanel" class="panel" style="display: none;">
+                <div class="panel-header">
+                    <h2>🎓 My Room Allocation</h2>
+                </div>
+                <div class="panel-body">
+                    <div id="myAllocation" class="allocation-info"></div>
+                </div>
+            </div>
+
+            <!-- Info Panel -->
+            <div class="panel info-panel">
+                <div class="panel-header">
+                    <h2>ℹ️ How It Works</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>1️⃣ Connect Wallet</h3>
+                            <p>Connect your MetaMask wallet to the Sepolia testnet</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>2️⃣ Browse Rooms</h3>
+                            <p>View available hostel rooms with their fees</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>3️⃣ Apply & Pay</h3>
+                            <p>Select a room and pay the fee to secure your allocation</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>4️⃣ Confirmation</h3>
+                            <p>Transaction is recorded on the blockchain permanently</p>
+                        </div>
+                    </div>
+                    <div class="links">
+                        <a href="https://sepolia.etherscan.io" target="_blank" class="link">
+                            📊 View on Etherscan
+                        </a>
+                        <a href="https://sepoliafaucet.com" target="_blank" class="link">
+                            💧 Get Sepolia ETH
+                        </a>
+                        <a href="https://metamask.io" target="_blank" class="link">
+                            🦊 Install MetaMask
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built with ❤️ using Ethereum Smart Contracts | Sepolia Testnet</p>
+            <p class="contract-info">
+                Contract: <span id="contractAddress">Loading...</span>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Web3.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
