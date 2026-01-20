@@ -75,6 +75,9 @@
 7. MetaMask popup → Click **"Confirm"**
 8. Wait 20 seconds
 
+<img width="1918" height="975" alt="image" src="https://github.com/user-attachments/assets/8988de04-5e19-429e-b5b3-2aee12ff2973" />
+
+
 ### Step 9: Save Contract Address
 1. Look at **"Deployed Contracts"** section (bottom left)
 2. You'll see your contract (with copy icon)
