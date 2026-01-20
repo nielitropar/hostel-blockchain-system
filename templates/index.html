@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Allocation System</title>
+    <!-- Classic Fonts: Merriweather (Serif) for headings, Inter (Sans) for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="brand">
+                <span class="brand-icon">🏛️</span>
+                <div class="brand-text">
+                    <h1>Hostel Allocation Portal</h1>
+                    <span class="tagline">NIELIT Secure Blockchain System</span>
+                </div>
+            </div>
+            
+            <div class="wallet-controls">
+                <div id="walletInfo" class="wallet-badge" style="display: none;">
+                    <span class="status-dot"></span>
+                    <span id="userAddress">0x00...0000</span>
+                    <span id="userRole" class="role-tag">Visitor</span>
+                </div>
+                <button id="connectWallet" class="btn btn-outline">
+                    Connect Wallet
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main-content">
+        <!-- System Alerts -->
+        <div id="alertContainer"></div>
+
+        <!-- Dashboard Grid -->
+        <div class="dashboard-grid">
+            
+            <!-- Left Column: Controls & Info -->
+            <aside class="sidebar">
+                
+                <!-- Admin Panel (Conditional) -->
+                <div id="adminPanel" class="card admin-card" style="display: none;">
+                    <div class="card-header">
+                        <h2>Administrative Control</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="addRoomForm">
+                            <div class="form-group">
+                                <label>Set Room Fee (ETH)</label>
+                                <div class="input-wrapper">
+                                    <input type="number" id="roomFee" step="0.001" placeholder="0.00" required>
+                                    <span class="currency">ETH</span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                + Add New Room
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Student Allocation Status (Conditional) -->
+                <div id="studentPanel" class="card status-card" style="display: none;">
+                    <div class="card-header">
+                        <h2>My Allocation Status</h2>
+                    </div>
+                    <div class="card-body" id="myAllocation">
+                        <!-- Content injected by JS -->
+                    </div>
+                </div>
+
+                <!-- Information Panel -->
+                <div class="card info-card">
+                    <div class="card-header">
+                        <h2>System Information</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="info-list">
+                            <li><strong>Network:</strong> Sepolia Testnet</li>
+                            <li><strong>Status:</strong> <span class="text-success">Operational</span></li>
+                            <li><strong>Contract:</strong> <span id="contractAddress" class="mono-text">Loading...</span></li>
+                        </ul>
+                        <div class="action-links">
+                            <a href="https://cloud.google.com/application/web3/faucet/ethereum/sepolia" target="_blank">Get Test ETH</a>
+                            <a href="https://sepolia.etherscan.io" target="_blank">View Explorer</a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Right Column: Room Listings -->
+            <main class="listings">
+                <div class="section-header">
+                    <h2>Hostel Rooms</h2>
+                    <button id="refreshRooms" class="btn btn-text">
+                        Refresh List ⟳
+                    </button>
+                </div>
+
+                <div id="loadingRooms" class="loading-state">
+                    <div class="loader"></div>
+                    <p>Fetching blockchain data...</p>
+                </div>
+
+                <div id="roomsGrid" class="rooms-grid">
+                    <!-- Rooms injected by JS -->
+                </div>
+
+                <div id="noRooms" class="empty-state" style="display: none;">
+                    <div class="empty-icon">📭</div>
+                    <h3>No Rooms Listed</h3>
+                    <p>The administrator has not added any rooms to the allocation pool yet.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Web3 & Logic -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
