@@ -625,45 +625,26 @@ This project is created for educational purposes.
 
 ---
 
-## 🎓 Academic Submission Checklist
-
-- [ ] Smart contract deployed on Sepolia
-- [ ] Contract address saved and documented
-- [ ] Application deployed on PythonAnywhere
-- [ ] All screenshots taken
-- [ ] Project report completed
-- [ ] Code documented with comments
-- [ ] Test cases executed successfully
-- [ ] Transactions verified on Etherscan
-- [ ] Video demo recorded (optional)
-- [ ] Presentation prepared
-
----
-
 ## 🎉 Congratulations!
 
 You've successfully built and deployed a blockchain-based hostel allocation system!
 
-**Your Achievement:**
+**Achievement:**
 - ✅ Deployed Ethereum smart contract
 - ✅ Created full-stack DApp
 - ✅ Integrated Web3 and MetaMask
 - ✅ Deployed on PythonAnywhere
 - ✅ Verified on blockchain explorer
 
-**Share your project:**
-- Take screenshots
-- Document your journey
-- Present with confidence
-
-Good luck with your project! 🚀
-
 ---
 
 **Project Created By:** Dr. Sarwan Singh 
+
 **Date:** 20/01/2026  
+
 **Institution:**  National Institute of Electronics & Information Technology, Ropar 
-**Course:** AIML/ IoT/ Blockchain Technology / Web Development
+
+**Fields:** AIML/ IoT/ Blockchain Technology / Web Development
 
 ---
 
@@ -681,4 +662,5 @@ Good luck with your project! 🚀
 ---
 
 
-**Last Updated:** January 2026
+**Last Updated:** 20 January 2026
+
