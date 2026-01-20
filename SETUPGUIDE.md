@@ -75,7 +75,8 @@
 7. MetaMask popup → Click **"Confirm"**
 8. Wait 20 seconds
 
-<img width="1918" height="975" alt="image" src="https://github.com/user-attachments/assets/8988de04-5e19-429e-b5b3-2aee12ff2973" />
+
+<img width="1910" height="977" alt="image" src="https://github.com/user-attachments/assets/5ad8f96b-72bf-4a42-a4fe-0bd2c9d505e3" />
 
 
 ### Step 9: Save Contract Address
@@ -83,6 +84,13 @@
 2. You'll see your contract (with copy icon)
 3. Click copy icon
 4. **SAVE THIS ADDRESS** in notepad - you'll need it!
+
+
+
+
+<img width="1917" height="865" alt="image" src="https://github.com/user-attachments/assets/453e9819-c8fe-4f86-a79e-76afdbe2ad1d" />
+
+
 
 ---
 
@@ -164,6 +172,21 @@ You should see:
 6. Works? ✅ Great! Stop the server (Ctrl+C)
 
 ---
+
+# Screenshots
+
+College Admin View (only visible if metamask account is set to admin)
+
+
+<img width="1212" height="705" alt="image" src="https://github.com/user-attachments/assets/b83880ec-c70f-41fe-8d48-29b5680fdf02" />
+
+
+Student View (any other metamask account)
+
+
+<img width="1208" height="688" alt="image" src="https://github.com/user-attachments/assets/a7096f53-a030-434a-9120-6d234a990000" />
+
+
 
 ## 📍 PHASE 5: DEPLOY TO PYTHONANYWHERE (10 minutes)
 
