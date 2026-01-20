@@ -1,8 +1,8 @@
 from flask import Flask, render_template, jsonify, request
-from flask_cors import CORS
+from flask_cors import CORS # DELETE OR COMMENT THIS LINE IF DEPLOYING ON PYTHONANYWHERE
 
 app = Flask(__name__)
-CORS(app)
+CORS(app)  # DELETE OR COMMENT THIS LINE IF DEPLOYING ON PYTHONANYWHERE
 
 
 @app.route('/')
@@ -78,3 +78,4 @@ def get_config():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
