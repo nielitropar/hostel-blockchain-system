@@ -82,10 +82,10 @@ F --> G[PythonAnywhere Hosting]
 
 **Screenshot:**
 
-```
+
 <img width="1919" height="1029" alt="image" src="https://github.com/user-attachments/assets/d40118f0-c9a6-4f3d-9809-bf5c569749db" />
 
-```
+
 
 ---
 
@@ -103,11 +103,10 @@ Block Explorer: https://sepolia.etherscan.io
 
 **Screenshot:**
 
-```
 
 <img width="389" height="672" alt="image" src="https://github.com/user-attachments/assets/e69ab5fd-2b16-4a1a-8756-b7db91b9a5ce" />
 
-```
+
 
 ---
 
@@ -131,7 +130,6 @@ Fund **College** and **Student** accounts.
 
 **Screenshot:**
 
-```
 <img width="512" height="858" alt="image" src="https://github.com/user-attachments/assets/f336f51e-423e-47f6-a710-e6d65f065072" />
 
 <img width="509" height="742" alt="image" src="https://github.com/user-attachments/assets/97838ad4-4440-4b67-a864-6804f6d6926d" />
@@ -143,7 +141,6 @@ Fund **College** and **Student** accounts.
 <img width="1395" height="804" alt="image" src="https://github.com/user-attachments/assets/f2add7fe-1d94-48a6-8092-92d399060427" />
 
 
-```
 
 ---
 
@@ -159,7 +156,6 @@ Steps using Remix IDE:
 
 **Screenshot Placeholders:**
 
-```
 <img width="1839" height="954" alt="image" src="https://github.com/user-attachments/assets/a27c696c-00c8-49e9-8857-9aef080ecc43" />
 <img width="1246" height="918" alt="image" src="https://github.com/user-attachments/assets/95eb6075-986d-4013-8f2e-08b760f7b3c5" />
 <img width="1470" height="921" alt="image" src="https://github.com/user-attachments/assets/f338bed1-7d6b-4425-9973-a8e33ce1868b" />
@@ -170,7 +166,7 @@ Steps using Remix IDE:
 
 ![Screenshot: Transaction Confirmed](screenshots/tx-confirm.png)
 ![Screenshot: Contract on Etherscan](screenshots/etherscan-contract.png)
-```
+
 
 ---
 
@@ -202,9 +198,8 @@ Open: `http://127.0.0.1:5000`
 
 **Screenshot:**
 
-```
 ![Screenshot: Local Application Running](screenshots/local-run.png)
-```
+
 
 ---
 
@@ -251,9 +246,9 @@ https://<username>.pythonanywhere.com
 
 **Screenshot:**
 
-```
+
 ![Screenshot: Live Deployment](screenshots/live-app.png)
-```
+
 
 ---
 
@@ -267,10 +262,10 @@ https://<username>.pythonanywhere.com
 
 **Screenshot Placeholders:**
 
-```
+
 ![Screenshot: Admin Adding Room](screenshots/add-room.png)
 ![Screenshot: Room Added](screenshots/room-added.png)
-```
+
 
 ---
 
@@ -283,11 +278,11 @@ https://<username>.pythonanywhere.com
 
 **Screenshot:**
 
-```
+
 ![Screenshot: Student Applying](screenshots/apply-room.png)
 ![Screenshot: MetaMask Payment](screenshots/payment.png)
 ![Screenshot: Allocation Success](screenshots/allocated.png)
-```
+
 
 ---
 
@@ -301,9 +296,9 @@ Verify on Etherscan:
 
 **Screenshot:**
 
-```
+
 ![Screenshot: Etherscan Transactions](screenshots/etherscan-tx.png)
-```
+
 
 ---
 
@@ -349,4 +344,4 @@ Includes:
 
 ## 14. Last Updated
 
-20 January 2026
+21 January 2026
