@@ -339,17 +339,6 @@ Open it in browser!
 **Problem: Can't see rooms**
 - Solution: Make sure you added contract address in app.py
 
----
-
-## 📸 TAKE SCREENSHOTS FOR SUBMISSION
-
-1. MetaMask with both accounts
-2. Remix contract deployment
-3. Sepolia Etherscan transactions
-4. Your live PythonAnywhere URL
-5. Admin panel adding room
-6. Student applying for room
-7. Successful allocation
 
 ---
 
