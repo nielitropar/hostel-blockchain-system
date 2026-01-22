@@ -1,381 +1,246 @@
-# Hostel Room Allocation System — Overview
+make overview.md better easy to understand clear steps and proper headers for screenshots give completeHere is a completely restructured, polished, and comprehensive version of your `overview.md`.
 
-This document provides a complete overview of the Blockchain-based Hostel Room Allocation System, including setup, deployment, testing, verification, and screenshot placeholders to support academic documentation and project submissions.
-
----
-
-## 1. Project Description
-
-The Hostel Room Allocation System is a decentralized application (DApp) built on the Ethereum blockchain. It enables an administrator to add hostel rooms and students to apply and pay room fees using cryptocurrency on the Sepolia Test Network. The frontend uses MetaMask for wallet authentication, and blockchain operations are conducted via smart contracts written in Solidity.
+I have organized it into logical **Phases** to make the steps easier to follow. I have also added clear, descriptive headers for every screenshot so the reader knows exactly what they are looking at.
 
 ---
 
-## 2. Key Features
+# 🏢 Hostel Room Allocation System — Project Overview
 
-* MetaMask wallet authentication
-* Blockchain-based fee payment
-* Admin-controlled room creation
-* Student room application workflow
-* On-chain verification via Etherscan
-* Deployment on PythonAnywhere
+**Institution:** National Institute of Electronics & Information Technology, Ropar
+**Project Type:** Blockchain DApp (Decentralized Application)
+**Network:** Ethereum Sepolia Testnet
 
 ---
 
-## 3. Architecture Overview
+## 📖 1. Project Abstract
+
+This project is a decentralized application (DApp) designed to automate the allocation of hostel rooms. Built on the **Ethereum Blockchain**, it eliminates the need for manual record-keeping by using **Smart Contracts** to handle room availability and fee payments securely.
+
+**Core Functionality:**
+
+* **Admins** can add rooms to the blockchain.
+* **Students** can view available rooms and book them by paying ETH.
+* **Transparency:** All transactions are immutable and verifiable on Etherscan.
+
+---
+
+## 🏗️ 2. System Architecture
+
+The system connects a standard web frontend to the Ethereum blockchain via Web3.js.
 
 ```mermaid
 graph TD
-A[Student / Admin Browser] --> B[Frontend Web3.js]
-B --> C[MetaMask Wallet]
-C --> D[Ethereum Sepolia Testnet]
-D -->|Smart Contract| E[HostelAllocation.sol]
-B --> F[Flask Backend]
-F --> G[PythonAnywhere Hosting]
-```
-
----
-
-## 4. Technology Stack
-
-**Blockchain Layer**
-
-* Ethereum Sepolia
-* Solidity ^0.8.20
-* MetaMask
-* Web3.js
-
-**Backend Layer**
-
-* Python 3.x
-* Flask 3.0
-* Flask‑CORS
-
-**Frontend Layer**
-
-* HTML / CSS / JS
-
-**Deployment**
-
-* PythonAnywhere
-
----
-
-## 5. System Requirements
-
-| Requirement    | Description                |
-| -------------- | -------------------------- |
-| Wallet         | MetaMask Browser Extension |
-| Test ETH       | Sepolia ETH Faucet         |
-| Python Version | Python 3.7+                |
-| Hosting        | PythonAnywhere (Free)      |
-| IDE            | VS Code / Sublime / Any    |
-
----
-
-## 6. Blockchain Setup Steps
-
-### 6.1 MetaMask Installation
-
-1. Install MetaMask from metamask.io
-2. Create wallet
-3. Secure secret recovery phrase
-
-**Screenshot:**
-
-
-<img width="1919" height="1029" alt="image" src="https://github.com/user-attachments/assets/d40118f0-c9a6-4f3d-9809-bf5c569749db" />
-
-
-
----
-
-### 6.2 Add Sepolia Network
-
-Configure network:
+    User[User (Student/Admin)] -->|Browser| Frontend[HTML/CSS/JS Interface]
+    Frontend -->|Web3.js| Wallet[MetaMask Wallet]
+    Wallet -->|Sign Transaction| Blockchain[Ethereum Sepolia Network]
+    Blockchain -->|Execute Code| Contract[HostelAllocation.sol]
+    Frontend -->|Fetch Config| Backend[Flask Python App]
+    Backend -->|Hosted On| Server[PythonAnywhere]
 
 ```
-Network: Sepolia Test Network
-RPC: https://sepolia.infura.io/v3/
-ChainID: 11155111
-Symbol: SepoliaETH
-Block Explorer: https://sepolia.etherscan.io
-```
-
-**Screenshot:**
-
-
-<img width="389" height="672" alt="image" src="https://github.com/user-attachments/assets/e69ab5fd-2b16-4a1a-8756-b7db91b9a5ce" />
-
-
 
 ---
 
-### 6.3 Faucet Funding
+## 🛠️ 3. Technology Stack
 
-Use recommended faucet:
-
-<img width="401" height="631" alt="image" src="https://github.com/user-attachments/assets/fb508057-8fb7-4a52-a5fb-f75bd5c16c9b" />
-
-<img width="395" height="639" alt="image" src="https://github.com/user-attachments/assets/5307d2f7-c5e9-4144-85fa-3cc13d3369a6" />
-
-<img width="869" height="495" alt="image" src="https://github.com/user-attachments/assets/e34ea684-6833-44f3-86c8-0d4a50139db9" />
-
-
-* [https://sepolia-faucet.pk910.de/](https://sepolia-faucet.pk910.de/)
-
-* [https://cloud.google.com/application/web3/faucet/ethereum/sepolia](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
-
-
-Fund **College** and **Student** accounts.
-
-**Screenshot:**
-
-<img width="512" height="858" alt="image" src="https://github.com/user-attachments/assets/f336f51e-423e-47f6-a710-e6d65f065072" />
-
-<img width="509" height="742" alt="image" src="https://github.com/user-attachments/assets/97838ad4-4440-4b67-a864-6804f6d6926d" />
-
-<img width="670" height="309" alt="image" src="https://github.com/user-attachments/assets/01d95bc9-9c67-4117-a124-9177e85e585e" />
-
-<img width="666" height="435" alt="image" src="https://github.com/user-attachments/assets/43bd59a9-80be-4135-9149-c162594efa09" />
-
-<img width="1395" height="804" alt="image" src="https://github.com/user-attachments/assets/f2add7fe-1d94-48a6-8092-92d399060427" />
-
-
+| Layer | Technology | Purpose |
+| --- | --- | --- |
+| **Blockchain** | Solidity ^0.8.20 | Writing the Smart Contract logic. |
+| **Network** | Sepolia Testnet | Testing environment for free ETH transactions. |
+| **Wallet** | MetaMask | Browser extension to sign transactions. |
+| **Backend** | Python Flask | Serving the web app and configuration. |
+| **Frontend** | HTML5, CSS3, JS | User interface for Admins and Students. |
+| **Hosting** | PythonAnywhere | Live deployment of the web application. |
 
 ---
 
-### 6.4 Smart Contract Deployment
+## 🚀 4. Step-by-Step Implementation Guide
 
-Steps using Remix IDE:
+Follow these phases to set up, deploy, and test the system.
 
-1. Open remix.ethereum.org
-2. Create `HostelAllocation.sol`
-3. Compile using v0.8.20
-4. Deploy using Injected Provider (MetaMask)
-5. Save contract address
+### 📍 Phase 1: Wallet & Network Setup
 
-**Screenshot Placeholders:**
+**Goal:** Prepare your browser to interact with the Blockchain.
 
-<img width="1839" height="954" alt="image" src="https://github.com/user-attachments/assets/a27c696c-00c8-49e9-8857-9aef080ecc43" />
-<img width="1246" height="918" alt="image" src="https://github.com/user-attachments/assets/95eb6075-986d-4013-8f2e-08b760f7b3c5" />
-<img width="1470" height="921" alt="image" src="https://github.com/user-attachments/assets/f338bed1-7d6b-4425-9973-a8e33ce1868b" />
-<img width="1832" height="908" alt="image" src="https://github.com/user-attachments/assets/71dad23e-3d91-4439-95cb-19c99a4ea2de" />
-<img width="1793" height="878" alt="image" src="https://github.com/user-attachments/assets/e8ac04f3-fb3f-4334-af7c-5d66d8af1aab" />
-<img width="771" height="906" alt="image" src="https://github.com/user-attachments/assets/ec580a8c-615a-4b24-9629-c03873ae87ad" />
-<img width="1794" height="859" alt="image" src="https://github.com/user-attachments/assets/c7a1e062-ff45-4cd0-8599-00440051f245" />
-<img width="1543" height="1010" alt="image" src="https://github.com/user-attachments/assets/667065dd-5b8d-4400-9b8c-61448110e4bd" />
-<img width="1446" height="1020" alt="image" src="https://github.com/user-attachments/assets/be1de5e6-d115-4a3c-9e4b-24d36f823612" />
-<img width="1918" height="936" alt="image" src="https://github.com/user-attachments/assets/bdd3dd99-c948-4531-b703-d38b969daaf8" />
-<img width="1472" height="857" alt="image" src="https://github.com/user-attachments/assets/669047d2-fb68-414b-8c42-f721ccae9012" />
-<img width="1821" height="1008" alt="image" src="https://github.com/user-attachments/assets/5cb8176b-773c-463d-8bb7-a8cb8abbc092" />
-<img width="1918" height="1021" alt="image" src="https://github.com/user-attachments/assets/d302c8e4-0a09-4517-beef-6abb5b50bdc2" />
+1. **Install MetaMask:** Download the extension from [metamask.io](https://metamask.io).
+2. **Create Two Accounts:**
+* **Account 1:** Name it "College Admin"
+* **Account 2:** Name it "Student"
 
 
+3. **Add Sepolia Network:** If not visible, add it manually via Settings > Networks.
+
+#### 📸 Screenshot: MetaMask Installation
+
+<img width="1919" height="1029" alt="MetaMask Installation" src="https://github.com/user-attachments/assets/d40118f0-c9a6-4f3d-9809-bf5c569749db" />
+
+#### 📸 Screenshot: Configuring Sepolia Network
+
+<img width="389" height="672" alt="Sepolia Configuration" src="https://github.com/user-attachments/assets/e69ab5fd-2b16-4a1a-8756-b7db91b9a5ce" />
 
 ---
 
-## 7. Local Development Setup
+### 📍 Phase 2: Funding Your Wallet (Faucets)
 
-### Project Structure
+**Goal:** Get free "Test ETH" to pay for gas fees. You cannot run the app without this.
 
-```
-hostel-blockchain-system/
-├── app.py
-├── requirements.txt
-├── HostelAllocation.sol
-├── templates/
-│   └── index.html
-├── static/
-│   ├── style.css
-│   └── app.js
-└── README.md
-```
+1. Visit a faucet (e.g., [Google Web3 Faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) or [Sepolia PoW Faucet](https://sepolia-faucet.pk910.de/)).
+2. Enter your **College Admin** address and request funds.
+3. Repeat for your **Student** address.
 
-### Running Locally
+#### 📸 Screenshot: Faucet Interfaces
 
-```
-pip install -r requirements.txt
-python app.py
-```
+<img width="401" height="631" alt="Faucet 1" src="[https://github.com/user-attachments/assets/fb508057-8fb7-4a52-a5fb-f75bd5c16c9b](https://github.com/user-attachments/assets/fb508057-8fb7-4a52-a5fb-f75bd5c16c9b)" />
+<img width="395" height="639" alt="Faucet 2" src="[https://github.com/user-attachments/assets/5307d2f7-c5e9-4144-85fa-3cc13d3369a6](https://github.com/user-attachments/assets/5307d2f7-c5e9-4144-85fa-3cc13d3369a6)" />
+<img width="869" height="495" alt="Faucet 3" src="[https://github.com/user-attachments/assets/e34ea684-6833-44f3-86c8-0d4a50139db9](https://github.com/user-attachments/assets/e34ea684-6833-44f3-86c8-0d4a50139db9)" />
 
-Open: `http://127.0.0.1:5000`
+#### 📸 Screenshot: Successful Funding Verification
 
-**Screenshot:**
-
-<img width="1642" height="877" alt="image" src="https://github.com/user-attachments/assets/319f8ca4-025a-4c4c-93cf-ded60c54acc2" />
-
-Admin View (is metamask acocunt is same from which contract is wriite on chain)
-<img width="1243" height="755" alt="image" src="https://github.com/user-attachments/assets/82e04457-cbdb-485a-9a6e-5d66952fe6cd" />
-
-Admin can add room
-<img width="1585" height="890" alt="image" src="https://github.com/user-attachments/assets/ccb446da-152c-4886-b78d-86f75efc0d02" />
-
-Room added sucessfully
-<img width="1246" height="766" alt="image" src="https://github.com/user-attachments/assets/2a112e64-9154-4300-b99a-cdf10c6c0f39" />
-
-Let me add some more rooms
-<img width="1280" height="708" alt="image" src="https://github.com/user-attachments/assets/c3d3bd21-48b4-4ee6-b4f5-d1ba1402eb52" />
-
-
-
-As soon as you will change metamask account (someone else not admin visits the website add room option dissappears)
-<img width="1422" height="830" alt="image" src="https://github.com/user-attachments/assets/d67a0769-0b2d-4a4b-872d-ba6da2165eeb" />
-
-Student can apply for a room
-<img width="1228" height="732" alt="image" src="https://github.com/user-attachments/assets/da50399f-1ef4-4df6-aa4a-b5f6dd957312" />
-
-Let's apply for a room
-<img width="1609" height="886" alt="image" src="https://github.com/user-attachments/assets/c63ba60d-32bb-4152-962c-4a11116570ef" />
-
-After confirming transaction using metamask wallet room is alloted to me
-<img width="1222" height="850" alt="image" src="https://github.com/user-attachments/assets/69eadac5-bf4d-430d-89c9-e15f053ee1d8" />
-
-
+<img width="512" height="858" alt="Wallet Balance 1" src="[https://github.com/user-attachments/assets/f336f51e-423e-47f6-a710-e6d65f065072](https://github.com/user-attachments/assets/f336f51e-423e-47f6-a710-e6d65f065072)" />
+<img width="509" height="742" alt="Wallet Balance 2" src="[https://github.com/user-attachments/assets/97838ad4-4440-4b67-a864-6804f6d6926d](https://github.com/user-attachments/assets/97838ad4-4440-4b67-a864-6804f6d6926d)" />
 
 ---
 
-## 8. Deployment on PythonAnywhere
+### 📍 Phase 3: Smart Contract Deployment
 
-**Note:** Do these changes in app.py
+**Goal:** Upload the `HostelAllocation.sol` code to the Blockchain using Remix IDE.
 
-from flask_cors import CORS # DELETE OR COMMENT THIS LINE IF DEPLOYING ON PYTHONANYWHERE
-
-CORS(app)  # DELETE OR COMMENT THIS LINE IF DEPLOYING ON PYTHONANYWHERE
-
-### 8.1 File Upload
-
-Upload via File Browser into:
-
-```
-/home/<username>/hostel-blockchain-system
-```
-
-### 8.2 Install Dependencies (Optional you can skip pythonanywhere already have these modules installed)
-
-```
-pip3 install --user -r requirements.txt
-```
-
-### 8.3 Reload Web App
-
-Open final application:
-
-```
-https://<username>.pythonanywhere.com
-```
-
-**Screenshot:**
+1. Open [Remix IDE](https://remix.ethereum.org).
+2. Create a new file `HostelAllocation.sol` and paste the code.
+3. Compile using version `0.8.20`.
+4. **Deploy:**
+* Environment: Select **Injected Provider - MetaMask**.
+* Make sure you are on the **College Admin** account.
+* Click **Deploy**.
 
 
-<img width="1632" height="933" alt="image" src="https://github.com/user-attachments/assets/6016b510-b9c0-43c1-b398-384fa2c9c448" />
+5. **Copy Address:** Copy the deployed contract address (starts with `0x...`) for the next phase.
 
+#### 📸 Screenshot: Remix IDE - Creating the File
 
+<img width="1839" height="954" alt="Create File" src="[https://github.com/user-attachments/assets/a27c696c-00c8-49e9-8857-9aef080ecc43](https://github.com/user-attachments/assets/a27c696c-00c8-49e9-8857-9aef080ecc43)" />
 
----
+#### 📸 Screenshot: Compiling the Code
 
-## 9. Application Workflow Testing
+<img width="1246" height="918" alt="Compile Code" src="[https://github.com/user-attachments/assets/95eb6075-986d-4013-8f2e-08b760f7b3c5](https://github.com/user-attachments/assets/95eb6075-986d-4013-8f2e-08b760f7b3c5)" />
 
-### 9.1 Admin Flow
+#### 📸 Screenshot: Selecting Injected Provider (MetaMask)
 
-1. Connect MetaMask
-2. Select College account
-3. Add Room (fee in ETH)
+<img width="1470" height="921" alt="Injected Provider" src="[https://github.com/user-attachments/assets/f338bed1-7d6b-4425-9973-a8e33ce1868b](https://github.com/user-attachments/assets/f338bed1-7d6b-4425-9973-a8e33ce1868b)" />
 
-**Screenshot Placeholders:**
+#### 📸 Screenshot: Deployment Transaction
 
+<img width="1832" height="908" alt="Deploy Transaction" src="[https://github.com/user-attachments/assets/71dad23e-3d91-4439-95cb-19c99a4ea2de](https://github.com/user-attachments/assets/71dad23e-3d91-4439-95cb-19c99a4ea2de)" />
+<img width="1793" height="878" alt="Confirm Deploy" src="[https://github.com/user-attachments/assets/e8ac04f3-fb3f-4334-af7c-5d66d8af1aab](https://github.com/user-attachments/assets/e8ac04f3-fb3f-4334-af7c-5d66d8af1aab)" />
 
-<img width="1918" height="1016" alt="image" src="https://github.com/user-attachments/assets/ab792d99-9571-49b9-92ac-145f81bb2b38" />
+#### 📸 Screenshot: Copying the Contract Address
 
-<img width="1628" height="957" alt="image" src="https://github.com/user-attachments/assets/ed2bca5f-27e3-4966-84b3-e95dfa43f99e" />
-
-
+<img width="771" height="906" alt="Copy Address" src="[https://github.com/user-attachments/assets/ec580a8c-615a-4b24-9629-c03873ae87ad](https://github.com/user-attachments/assets/ec580a8c-615a-4b24-9629-c03873ae87ad)" />
 
 ---
 
-### 9.2 Student Flow
+### 📍 Phase 4: Local Application Setup
 
-1. Switch MetaMask to Student account
-2. Apply for Room
-3. Confirm blockchain payment
-4. Allocation visible
+**Goal:** Connect the Python Flask frontend to your deployed contract.
 
-**Screenshot:**
+1. Update `app.py`: Replace `contractAddress` with the address you copied from Remix.
+2. Install requirements: `pip install -r requirements.txt`.
+3. Run the app: `python app.py`.
+4. Open `http://127.0.0.1:5000` in your browser.
 
-Switch to some other account make sure it has some gas(sepolia eth)
+#### 📸 Screenshot: Application Running Locally
 
-<img width="1652" height="901" alt="image" src="https://github.com/user-attachments/assets/20a0bfeb-ed0c-4878-aa32-bd1006b5da79" />
-
-Studet View
-<img width="1657" height="968" alt="image" src="https://github.com/user-attachments/assets/f10083e9-11a2-4eca-88ea-6d560ad546fe" />
-
-Applying for room (as a student) (doing transaction)
-<img width="1917" height="1018" alt="image" src="https://github.com/user-attachments/assets/288399f6-71ce-4252-baab-fee77181090a" />
-
-Allocation Success
-<img width="1622" height="962" alt="image" src="https://github.com/user-attachments/assets/1a15aeea-1f49-41d7-9d31-be56da4a5981" />
-
-
+<img width="1642" height="877" alt="Localhost Running" src="[https://github.com/user-attachments/assets/319f8ca4-025a-4c4c-93cf-ded60c54acc2](https://github.com/user-attachments/assets/319f8ca4-025a-4c4c-93cf-ded60c54acc2)" />
 
 ---
 
-## 10. Blockchain Verification
+### 📍 Phase 5: Testing the Workflow
 
-Verify on Etherscan:
+#### A. Admin Workflow (College Account)
 
-* Contract creation
-* addRoom()
-* applyForRoom()
+Only the wallet that deployed the contract can see the "Add Room" panel.
 
-**Screenshot:**
+1. Connect Wallet -> Select "College Admin".
+2. Enter Fee (e.g., 0.01 ETH) -> Click **Add Room**.
+3. Confirm transaction in MetaMask.
 
-Etherscan Transactions
+**📸 Screenshot: Admin Dashboard (Authorized View)**
+<img width="1243" height="755" alt="Admin View" src="[https://github.com/user-attachments/assets/82e04457-cbdb-485a-9a6e-5d66952fe6cd](https://github.com/user-attachments/assets/82e04457-cbdb-485a-9a6e-5d66952fe6cd)" />
 
-<img width="1818" height="1021" alt="image" src="https://github.com/user-attachments/assets/099b88a2-ab34-431f-b786-82ba2524fd54" />
+**📸 Screenshot: Admin Adding a Room**
+<img width="1585" height="890" alt="Adding Room" src="[https://github.com/user-attachments/assets/ccb446da-152c-4886-b78d-86f75efc0d02](https://github.com/user-attachments/assets/ccb446da-152c-4886-b78d-86f75efc0d02)" />
 
-
-
----
-
-## 11. Academic Reporting Sections
-
-Includes:
-
-* Abstract
-* Introduction
-* Literature Review
-* System Design
-* Implementation
-* Testing
-* Results
-* Conclusion
-* References
+**📸 Screenshot: Room Successfully Listed**
+<img width="1246" height="766" alt="Room Added" src="[https://github.com/user-attachments/assets/2a112e64-9154-4300-b99a-cdf10c6c0f39](https://github.com/user-attachments/assets/2a112e64-9154-4300-b99a-cdf10c6c0f39)" />
 
 ---
 
-## 12. Future Enhancements
+#### B. Student Workflow (Public Account)
 
-* Refund workflows
-* Room category management
-* Analytics dashboard
-* Notification system
-* Token reward scheme
+Any other wallet connects as a Student. They cannot add rooms; they can only apply.
 
----
+1. Switch MetaMask to "Student Account".
+2. Refresh page -> Admin panel disappears.
+3. Click **Apply for Room**.
+4. Pay the fee via MetaMask.
 
-## 13. Final Deliverables Summary
+**📸 Screenshot: Student Dashboard (Restricted View)**
+<img width="1422" height="830" alt="Student View" src="[https://github.com/user-attachments/assets/d67a0769-0b2d-4a4b-872d-ba6da2165eeb](https://github.com/user-attachments/assets/d67a0769-0b2d-4a4b-872d-ba6da2165eeb)" />
 
-| Deliverable               | Status      |
-| ------------------------- | ----------- |
-| Smart Contract            | Completed   |
-| DApp Frontend             | Completed   |
-| Flask Backend             | Completed   |
-| PythonAnywhere Deployment | Completed   |
-| Blockchain Verification   | Completed   |
-| Academic Documentation    | In Progress |
-| Screenshot Placeholders   | Completed   |
+**📸 Screenshot: Student Applying for Room**
+<img width="1609" height="886" alt="Apply Button" src="[https://github.com/user-attachments/assets/c63ba60d-32bb-4152-962c-4a11116570ef](https://github.com/user-attachments/assets/c63ba60d-32bb-4152-962c-4a11116570ef)" />
+
+**📸 Screenshot: Successful Allocation**
+<img width="1222" height="850" alt="Success Message" src="[https://github.com/user-attachments/assets/69eadac5-bf4d-430d-89c9-e15f053ee1d8](https://github.com/user-attachments/assets/69eadac5-bf4d-430d-89c9-e15f053ee1d8)" />
 
 ---
 
-## 14. Last Updated
+### 📍 Phase 6: Live Deployment (PythonAnywhere)
 
-22 January 2026
+**Goal:** Host the application on the public internet.
+
+1. Upload project files to PythonAnywhere.
+2. Install dependencies in the Bash console.
+3. Configure WSGI file to point to your `app.py`.
+4. Disable CORS in `app.py` (as per code comments).
+5. Reload the web app.
+
+#### 📸 Screenshot: Live Site on PythonAnywhere
+
+<img width="1632" height="933" alt="PythonAnywhere Deployment" src="[https://github.com/user-attachments/assets/6016b510-b9c0-43c1-b398-384fa2c9c448](https://github.com/user-attachments/assets/6016b510-b9c0-43c1-b398-384fa2c9c448)" />
+
+---
+
+## 🔍 5. Blockchain Verification
+
+Every action taken in the app is permanently recorded on the blockchain. You can verify this using the Etherscan Block Explorer.
+
+**What to look for:**
+
+* **Contract Creation:** The first transaction deploying the code.
+* **Method `addRoom`:** Transactions where Admin added inventory.
+* **Method `applyForRoom`:** Transactions where Students paid fees.
+
+#### 📸 Screenshot: Etherscan Transaction Log
+
+<img width="1818" height="1021" alt="Etherscan Logs" src="[https://github.com/user-attachments/assets/099b88a2-ab34-431f-b786-82ba2524fd54](https://github.com/user-attachments/assets/099b88a2-ab34-431f-b786-82ba2524fd54)" />
+
+---
+
+## 🔮 6. Future Enhancements
+
+To further improve this system, the following features are proposed:
+
+1. **Refund System:** Allow students to cancel bookings and receive partial refunds.
+2. **Room Categories:** Distinguish between AC and Non-AC rooms with different fees.
+3. **Waitlists:** Allow students to queue for fully booked rooms.
+4. **Token Rewards:** Issue utility tokens to students for timely payments.
+
+---
+
+## 📜 7. License & Credits
+
+**Developed By:** Dr. Sarwan Singh
+**Institution:** National Institute of Electronics & Information Technology, Ropar
+**License:** MIT License
+**Date:** January 2026
