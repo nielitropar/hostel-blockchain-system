@@ -251,7 +251,8 @@ To further improve this system, the following features are proposed:
 
 ## 📜 7. License & Credits
 
-**Developed By:** Dr. Sarwan Singh
-**Institution:** National Institute of Electronics & Information Technology, Ropar
+**Developed By:** National Institute of Electronics & Information Technology
+
 **License:** MIT License
+
 **Date:** January 2026
