@@ -1,7 +1,3 @@
-make overview.md better easy to understand clear steps and proper headers for screenshots give completeHere is a completely restructured, polished, and comprehensive version of your `overview.md`.
-
-I have organized it into logical **Phases** to make the steps easier to follow. I have also added clear, descriptive headers for every screenshot so the reader knows exactly what they are looking at.
-
 ---
 
 # 🏢 Hostel Room Allocation System — Project Overview
