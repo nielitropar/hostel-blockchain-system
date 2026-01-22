@@ -163,9 +163,12 @@ Steps using Remix IDE:
 <img width="1793" height="878" alt="image" src="https://github.com/user-attachments/assets/e8ac04f3-fb3f-4334-af7c-5d66d8af1aab" />
 <img width="771" height="906" alt="image" src="https://github.com/user-attachments/assets/ec580a8c-615a-4b24-9629-c03873ae87ad" />
 <img width="1794" height="859" alt="image" src="https://github.com/user-attachments/assets/c7a1e062-ff45-4cd0-8599-00440051f245" />
+<img width="1543" height="1010" alt="image" src="https://github.com/user-attachments/assets/667065dd-5b8d-4400-9b8c-61448110e4bd" />
+<img width="1446" height="1020" alt="image" src="https://github.com/user-attachments/assets/be1de5e6-d115-4a3c-9e4b-24d36f823612" />
+<img width="1918" height="936" alt="image" src="https://github.com/user-attachments/assets/bdd3dd99-c948-4531-b703-d38b969daaf8" />
+<img width="1472" height="857" alt="image" src="https://github.com/user-attachments/assets/669047d2-fb68-414b-8c42-f721ccae9012" />
+<img width="1821" height="1008" alt="image" src="https://github.com/user-attachments/assets/5cb8176b-773c-463d-8bb7-a8cb8abbc092" />
 
-![Screenshot: Transaction Confirmed](screenshots/tx-confirm.png)
-![Screenshot: Contract on Etherscan](screenshots/etherscan-contract.png)
 
 
 ---
