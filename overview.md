@@ -168,6 +168,7 @@ Steps using Remix IDE:
 <img width="1918" height="936" alt="image" src="https://github.com/user-attachments/assets/bdd3dd99-c948-4531-b703-d38b969daaf8" />
 <img width="1472" height="857" alt="image" src="https://github.com/user-attachments/assets/669047d2-fb68-414b-8c42-f721ccae9012" />
 <img width="1821" height="1008" alt="image" src="https://github.com/user-attachments/assets/5cb8176b-773c-463d-8bb7-a8cb8abbc092" />
+<img width="1918" height="1021" alt="image" src="https://github.com/user-attachments/assets/d302c8e4-0a09-4517-beef-6abb5b50bdc2" />
 
 
 
@@ -201,12 +202,45 @@ Open: `http://127.0.0.1:5000`
 
 **Screenshot:**
 
-![Screenshot: Local Application Running](screenshots/local-run.png)
+<img width="1642" height="877" alt="image" src="https://github.com/user-attachments/assets/319f8ca4-025a-4c4c-93cf-ded60c54acc2" />
+
+Admin View (is metamask acocunt is same from which contract is wriite on chain)
+<img width="1243" height="755" alt="image" src="https://github.com/user-attachments/assets/82e04457-cbdb-485a-9a6e-5d66952fe6cd" />
+
+Admin can add room
+<img width="1585" height="890" alt="image" src="https://github.com/user-attachments/assets/ccb446da-152c-4886-b78d-86f75efc0d02" />
+
+Room added sucessfully
+<img width="1246" height="766" alt="image" src="https://github.com/user-attachments/assets/2a112e64-9154-4300-b99a-cdf10c6c0f39" />
+
+Let me add some more rooms
+<img width="1280" height="708" alt="image" src="https://github.com/user-attachments/assets/c3d3bd21-48b4-4ee6-b4f5-d1ba1402eb52" />
+
+
+
+As soon as you will change metamask account (someone else not admin visits the website add room option dissappears)
+<img width="1422" height="830" alt="image" src="https://github.com/user-attachments/assets/d67a0769-0b2d-4a4b-872d-ba6da2165eeb" />
+
+Student can apply for a room
+<img width="1228" height="732" alt="image" src="https://github.com/user-attachments/assets/da50399f-1ef4-4df6-aa4a-b5f6dd957312" />
+
+Let's apply for a room
+<img width="1609" height="886" alt="image" src="https://github.com/user-attachments/assets/c63ba60d-32bb-4152-962c-4a11116570ef" />
+
+After confirming transaction using metamask wallet room is alloted to me
+<img width="1222" height="850" alt="image" src="https://github.com/user-attachments/assets/69eadac5-bf4d-430d-89c9-e15f053ee1d8" />
+
 
 
 ---
 
 ## 8. Deployment on PythonAnywhere
+
+**Note:** Do these changes in app.py
+
+from flask_cors import CORS # DELETE OR COMMENT THIS LINE IF DEPLOYING ON PYTHONANYWHERE
+
+CORS(app)  # DELETE OR COMMENT THIS LINE IF DEPLOYING ON PYTHONANYWHERE
 
 ### 8.1 File Upload
 
@@ -216,30 +250,13 @@ Upload via File Browser into:
 /home/<username>/hostel-blockchain-system
 ```
 
-### 8.2 Install Dependencies
+### 8.2 Install Dependencies (Optional you can skip pythonanywhere already have these modules installed)
 
 ```
 pip3 install --user -r requirements.txt
 ```
 
-### 8.3 WSGI Configuration
-
-Set WSGI file to:
-
-```python
-project_home='/home/<username>/hostel-blockchain-system'
-sys.path.insert(0, project_home)
-from app import app as application
-```
-
-### 8.4 Static Mapping
-
-```
-URL: /static/
-Dir: /home/<username>/hostel-blockchain-system/static/
-```
-
-### 8.5 Reload Web App
+### 8.3 Reload Web App
 
 Open final application:
 
@@ -250,7 +267,8 @@ https://<username>.pythonanywhere.com
 **Screenshot:**
 
 
-![Screenshot: Live Deployment](screenshots/live-app.png)
+<img width="1632" height="933" alt="image" src="https://github.com/user-attachments/assets/6016b510-b9c0-43c1-b398-384fa2c9c448" />
+
 
 
 ---
@@ -266,8 +284,10 @@ https://<username>.pythonanywhere.com
 **Screenshot Placeholders:**
 
 
-![Screenshot: Admin Adding Room](screenshots/add-room.png)
-![Screenshot: Room Added](screenshots/room-added.png)
+<img width="1918" height="1016" alt="image" src="https://github.com/user-attachments/assets/ab792d99-9571-49b9-92ac-145f81bb2b38" />
+
+<img width="1628" height="957" alt="image" src="https://github.com/user-attachments/assets/ed2bca5f-27e3-4966-84b3-e95dfa43f99e" />
+
 
 
 ---
@@ -281,10 +301,19 @@ https://<username>.pythonanywhere.com
 
 **Screenshot:**
 
+Switch to some other account make sure it has some gas(sepolia eth)
 
-![Screenshot: Student Applying](screenshots/apply-room.png)
-![Screenshot: MetaMask Payment](screenshots/payment.png)
-![Screenshot: Allocation Success](screenshots/allocated.png)
+<img width="1652" height="901" alt="image" src="https://github.com/user-attachments/assets/20a0bfeb-ed0c-4878-aa32-bd1006b5da79" />
+
+Studet View
+<img width="1657" height="968" alt="image" src="https://github.com/user-attachments/assets/f10083e9-11a2-4eca-88ea-6d560ad546fe" />
+
+Applying for room (as a student) (doing transaction)
+<img width="1917" height="1018" alt="image" src="https://github.com/user-attachments/assets/288399f6-71ce-4252-baab-fee77181090a" />
+
+Allocation Success
+<img width="1622" height="962" alt="image" src="https://github.com/user-attachments/assets/1a15aeea-1f49-41d7-9d31-be56da4a5981" />
+
 
 
 ---
@@ -299,8 +328,10 @@ Verify on Etherscan:
 
 **Screenshot:**
 
+Etherscan Transactions
 
-![Screenshot: Etherscan Transactions](screenshots/etherscan-tx.png)
+<img width="1818" height="1021" alt="image" src="https://github.com/user-attachments/assets/099b88a2-ab34-431f-b786-82ba2524fd54" />
+
 
 
 ---
@@ -347,4 +378,4 @@ Includes:
 
 ## 14. Last Updated
 
-21 January 2026
+22 January 2026
