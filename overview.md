@@ -26,12 +26,12 @@ The system connects a standard web frontend to the Ethereum blockchain via Web3.
 
 ```mermaid
 graph TD
-    User[User (Student/Admin)] -->|Browser| Frontend[HTML/CSS/JS Interface]
-    Frontend -->|Web3.js| Wallet[MetaMask Wallet]
-    Wallet -->|Sign Transaction| Blockchain[Ethereum Sepolia Network]
-    Blockchain -->|Execute Code| Contract[HostelAllocation.sol]
-    Frontend -->|Fetch Config| Backend[Flask Python App]
-    Backend -->|Hosted On| Server[PythonAnywhere]
+    User["User (Student/Admin)"] -->|Browser| Frontend["HTML/CSS/JS Interface"]
+    Frontend -->|Web3.js| Wallet["MetaMask Wallet"]
+    Wallet -->|Sign Transaction| Blockchain["Ethereum Sepolia Network"]
+    Blockchain -->|Execute Code| Contract["HostelAllocation.sol"]
+    Frontend -->|Fetch Config| Backend["Flask Python App"]
+    Backend -->|Hosted On| Server["PythonAnywhere"]
 
 ```
 
