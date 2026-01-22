@@ -1,4 +1,4 @@
-# 🏢 Hostel Room Allocation System — Project Overview
+# 🏢 Hostel Room Allocation System: Project Overview
 
 **Institution:** National Institute of Electronics & Information Technology, Ropar
 
