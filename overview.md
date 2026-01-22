@@ -1,7 +1,9 @@
 # 🏢 Hostel Room Allocation System — Project Overview
 
 **Institution:** National Institute of Electronics & Information Technology, Ropar
+
 **Project Type:** Blockchain DApp (Decentralized Application)
+
 **Network:** Ethereum Sepolia Testnet
 
 ---
