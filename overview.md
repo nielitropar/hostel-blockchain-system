@@ -130,12 +130,20 @@ Follow these phases to set up, deploy, and test the system.
 <img width="1832" height="908" alt="Deploy Transaction" src="https://github.com/user-attachments/assets/71dad23e-3d91-4439-95cb-19c99a4ea2de](https://github.com/user-attachments/assets/71dad23e-3d91-4439-95cb-19c99a4ea2de" />
 <img width="1793" height="878" alt="Confirm Deploy" src="https://github.com/user-attachments/assets/e8ac04f3-fb3f-4334-af7c-5d66d8af1aab](https://github.com/user-attachments/assets/e8ac04f3-fb3f-4334-af7c-5d66d8af1aab" />
 
+<img width="1446" height="1020" alt="image" src="https://github.com/user-attachments/assets/be1de5e6-d115-4a3c-9e4b-24d36f823612" />
+
 <img width="501" height="752" alt="image" src="https://github.com/user-attachments/assets/2b4941ef-1807-4aab-a4f3-d6699f8e4bb3" />
 
 
 #### 📸 Screenshot: Copying the Contract Address
 
 <img width="771" height="906" alt="Copy Address" src="https://github.com/user-attachments/assets/ec580a8c-615a-4b24-9629-c03873ae87ad](https://github.com/user-attachments/assets/ec580a8c-615a-4b24-9629-c03873ae87ad" />
+
+<img width="1918" height="936" alt="image" src="https://github.com/user-attachments/assets/bdd3dd99-c948-4531-b703-d38b969daaf8" />
+
+<img width="1472" height="857" alt="image" src="https://github.com/user-attachments/assets/669047d2-fb68-414b-8c42-f721ccae9012" />
+
+<img width="1821" height="1008" alt="image" src="https://github.com/user-attachments/assets/5cb8176b-773c-463d-8bb7-a8cb8abbc092" />
 
 ---
 
@@ -149,6 +157,9 @@ Follow these phases to set up, deploy, and test the system.
 4. Open `http://127.0.0.1:5000` in your browser.
 
 #### 📸 Screenshot: Application Running Locally
+
+
+<img width="1918" height="1021" alt="image" src="https://github.com/user-attachments/assets/d302c8e4-0a09-4517-beef-6abb5b50bdc2" />
 
 <img width="1642" height="877" alt="Localhost Running" src="https://github.com/user-attachments/assets/319f8ca4-025a-4c4c-93cf-ded60c54acc2](https://github.com/user-attachments/assets/319f8ca4-025a-4c4c-93cf-ded60c54acc2" />
 
